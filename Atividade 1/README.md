@@ -1,43 +1,40 @@
-# ADS-JAVA2
-10 atividades referente ao módulo 2 do curso de ADS, na Unyleya, de PROGRAMAÇÃO ORIENTADA A OBJETOS
+# ADS-MODERN WEB
+1 atividade referente ao módulo 1 do curso de ADS, na Unyleya, de MODERN WEB
 
 ---------------------------------------
 ## EXERCÍCIO
 ---------------------------------------
 
 
-### Tarefas da Avaliação Final
-#### 1. Implementação de Novo Veículo na Concessionária
+### Descrição da ideia:
 
-Adicione um novo tipo de veículo ao sistema da concessionária. Com esta adição, você deverá incluir os atributos e métodos necessários para representar as características únicas deste veículo no sistema.
+Você criará uma página que mostra o horário atual em tempo real, e que também permite ao usuário trocar entre modo claro e escuro clicando em um botão.
+É um projeto visualmente simples, mas que:
+- Trabalha com setInterval em JavaScript (para atualizar a hora),
+- Usa DOM para exibir o horário e trocar o tema,
+- Usa classes CSS para aplicar os estilos.
 
-#### 2. Ajuste do Menu para Exibir Clientes Cadastrados
+O que o projeto deve conter:
+#### HTML:
+- Um <div> que mostra a hora atual (atualizada em tempo real),
+- Um botão para alternar entre modo claro e escuro.
 
-Realize ajustes no menu para permitir a visualização dos clientes cadastrados. Este recurso deverá oferecer uma interface que facilite a consulta das informações dos clientes da concessionária.
+#### CSS:
+- Estilos diferentes para o modo claro e escuro (alterando fundo e cor da fonte),
+- Fonte grande e visual limpa.
 
-#### 3.Refatoração do Método de Exibição de Veículos
+#### JavaScript:
+- Função que atualiza a hora a cada segundo,
+- Evento de clique para alternar entre os modos de cor (claro/escuro).
+  
+#### Exemplo visual:
 
-Refatore o método responsável por mostrar veículos, unificando-o para exibir de forma padronizada todos os tipos de veículos cadastrados. Essa mudança tornará o sistema mais organizado e simplificado para o usuário final.
-
-#### 4. Método de Sugestão de Veículo por Biotipo do Cliente
-
-Implemente um novo método que sugira veículos com base no biotipo do cliente. Esse método deverá cruzar dados do cliente e do veículo para oferecer sugestões personalizadas, ampliando a usabilidade do sistema.
-
-#### 5.Refatoração do Relatório de Vendas
-
-Refatore o relatório para incluir informações de lucro ou perda com a venda de cada veículo. Esse ajuste permitirá que a concessionária avalie o desempenho financeiro de suas transações.
-
-#### 6. Criação de Exceções Personalizadas
-
-Implemente pelo menos duas exceções personalizadas para lidar com situações específicas dentro do sistema da concessionária, garantindo um controle mais eficaz de erros.
-
-#### 7. Busca e Correção de Bugs
-
-Realize uma análise minuciosa do código em busca de possíveis bugs de execução. Documente e corrija esses erros, melhorando a estabilidade e confiabilidade do sistema.
+#### Extras possíveis:
+- Mostrar também a data atual (ex: sexta-feira, 13 de junho de 2025),
+- Trocar o ícone do botão dependendo do tema ( ou ),
+ - Adicionar uma pequena animação ao trocar o tema.
 
 ---------------------------------------
 ## Instruções de Entrega:
 ---------------------------------------
-####  Grave um vídeo demonstrando cada etapa de implementação, ajuste, refatoração e testes de exceções. Este vídeo deve mostrar o funcionamento do sistema, além dos processos e decisões técnicas de cada tarefa.
-
-####  Envie o código para análise, pode ser por repositório do GitHub ou a pasta compactada com seu código.
+###  Envie o código para análise, pode ser por repositório do GitHub ou a pasta compactada com seu código.
