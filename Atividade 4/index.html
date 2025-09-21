@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 Página Inicial- Minha Loja Virtual</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="logo">MinhaLoja</div>
+        <form class="busca" role="search">
+            <input type="text" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">🔍</button>
+        </form>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="#">Contato</a></li>
+                <button id="toggle-tema">🌙 Modo Escuro</button>
+            </ul>
+        </nav>
+    </header>
+    <!-- Seção de produtos -->
+    <main>
+        <section class="produtos">
+            <h2>Produtos em destaque</h2>
+            <!-- Grid onde os produtos vindos da API serão renderizados -->
+            <div id="grid-produtos" class="grid-produtos" aria-live="polite"></div>
+            <!-- Modal de Detalhes -->
+            <div id="modal-detalhes" class="modal">
+                <div class="modal-conteudo">
+                    <span class="modal-fechar">&times;</span>
+                    <h3 id="modal-titulo"></h3>
+                    <p id="modal-descricao"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <footer>
+        <p id="data-hora"></p>
+        <div class="rodape-conteudo">
+            <div>
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Trocas e devoluções</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Redes sociais</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copy">&copy; 2025 Minha Loja - Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

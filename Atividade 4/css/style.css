@@ -1,0 +1,396 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 189, 0.678);
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.busca {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 1rem;
+}
+
+.busca input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.busca button {
+    background: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de alternar tema */
+#toggle-tema {
+    background: white;
+    color: #e60014;
+    border: 2px solid #e60014;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+#toggle-tema:hover {
+    background: #e60014;
+    color: white;
+}
+
+/* Tema escuro */
+body.dark {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+body.dark header {
+    background: #222;
+}
+
+body.dark footer {
+    background: #111;
+}
+
+body.dark .produto {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Produtos */
+.produtos {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.produtos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgba(10, 10, 189, 0.678);
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.produto {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    /* vira um container flex */
+    flex-direction: column;
+    /* organiza em coluna */
+    justify-content: space-between;
+    /* força espaçamento entre imagem e textos */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 420px;
+    /* altura mínima para padronizar */
+}
+
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+    max-width: 100%;
+    height: 200px;
+    /* força altura fixa */
+    object-fit: contain;
+    /* mantém proporção sem cortar */
+    margin-bottom: 1rem;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.produto p {
+    margin-bottom: 0.5rem;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.produto button {
+    background: rgba(10, 10, 189, 0.678);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+}
+
+.produto button:hover {
+    background: rgba(0, 0, 73, 0.678);
+}
+
+/* ==== MODAL DE DETALHES ==== */
+.modal {
+    display: none;
+    /* escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-conteudo {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-fechar {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Ajuste no modo escuro */
+body.dark .modal-conteudo {
+    background: #333;
+    color: #f1f1f1;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.rodape-conteudo h4 {
+    margin-bottom: 0.5rem;
+}
+
+.rodape-conteudo ul {
+    list-style: none;
+}
+
+.rodape-conteudo a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.rodape-conteudo a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .busca {
+        margin: 1rem 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* ===== Produtos dinâmicos (cards) ===== */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform .18s ease, box-shadow .18s ease;
+    min-height: 420px;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+}
+
+.product-card h3 {
+    font-size: 1.05rem;
+    margin: 0.4rem 0;
+}
+
+.product-card p.description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+    min-height: 48px;
+    /* garante alinhamento quando descrição for curta */
+}
+
+.product-card .price {
+    font-weight: 700;
+    color: #27ae60;
+    margin-bottom: 0.6rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão padrão */
+.btn-primary {
+    background: #e60014;
+    color: white;
+    border: none;
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Botão secundário (ex.: ver detalhes) */
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 0.45rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Responsividade do grid (garante boas colunas) */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.4rem;
+}
+
+/* ===== Tema escuro: produtos/detalhes ===== */
+body.dark .product-card {
+    background: #1f1f1f;
+    color: #f0f0f0;
+    box-shadow: none;
+}
+
+body.dark .product-card p.description {
+    color: #d0d0d0;
+}
+
+body.dark .btn-primary {
+    background: #e60014;
+    color: #fff;
+    border: none;
+}
+
+body.dark .btn-secondary {
+    background: transparent;
+    border: 1px solid #3a3a3a;
+    color: #ddd;
+}
+
+/* ===== Ajustes para acessibilidade visual ===== */
+.product-card:focus-within {
+    outline: 3px solid rgba(230, 0, 20, 0.15);
+    outline-offset: 4px;
+}
